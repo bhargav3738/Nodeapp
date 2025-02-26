@@ -16,9 +16,20 @@ steps:
         'push',
         'us-central1-docker.pkg.dev/thinking-glass-351217/bhargav-100932523/$COMMIT_SHA'
       ]
-  
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gcloud run deploy SERVICE_NAME \
+          --image us-central1-docker.pkg.dev/thinking-glass-351217/bhargav-100932523/$COMMIT_SHA\
+          --region us-central1 \
+          --allow-unauthenticated
+
 images:
   - 'us-central1-docker.pkg.dev/thinking-glass-351217/bhargav-100932523/$COMMIT_SHA'
 
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
+substitutions:
+  _SERVICE_NAME: "bhargav-100932523-service"
