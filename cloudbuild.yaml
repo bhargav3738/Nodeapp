@@ -32,4 +32,4 @@ images:
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
 substitutions:
-  _SERVICE_NAME: "bhargav-100932523-service"
+  _SERVICE_NAME: "bhargav-100932523"
