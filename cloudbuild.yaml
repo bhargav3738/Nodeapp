@@ -23,7 +23,7 @@ steps:
     - 'deploy'
     - 'assignment2'
     - '--image'
-    - 'us-central1-docker.pkg.dev/thinking-glass-351217/bhargav-100932523/$COMMIT_SHA}'
+    - 'us-central1-docker.pkg.dev/thinking-glass-351217/bhargav-100932523/$COMMIT_SHA'
     - '--region'
     - 'us-central1'
 images:
