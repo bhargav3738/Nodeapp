@@ -16,16 +16,7 @@ steps:
         'push',
         'us-central1-docker.pkg.dev/thinking-glass-351217/bhargav-100932523/$COMMIT_SHA'
       ]
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: gcloud
-    args:
-    - 'run'
-    - 'deploy'
-    - 'assignment2'
-    - '--image'
-    - 'us-central1-docker.pkg.dev/thinking-glass-351217/bhargav-100932523/$COMMIT_SHA'
-    - '--region'
-    - 'us-central1'
+  
 images:
   - 'us-central1-docker.pkg.dev/thinking-glass-351217/bhargav-100932523/$COMMIT_SHA'
 
